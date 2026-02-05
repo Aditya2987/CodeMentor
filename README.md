@@ -1,6 +1,18 @@
 # 🎓 CodeMentor AI - Intelligent Learning Platform
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 An AI-powered learning platform that helps developers master programming through personalized learning plans, code explanations, and progress tracking.
+
+![CodeMentor AI](https://img.shields.io/badge/Status-Production%20Ready-success)
+![Demo Mode](https://img.shields.io/badge/Demo%20Mode-Available-blue)
+
+---
+
+---
 
 ## ✨ Features
 
@@ -9,6 +21,21 @@ An AI-powered learning platform that helps developers master programming through
 - **📊 Progress Dashboard**: Track your learning journey with detailed statistics
 - **🎯 Adaptive Learning**: Content adjusts to beginner, intermediate, or advanced levels
 - **💻 Multi-Language Support**: JavaScript, Python, Java, C++, and more
+- **🎨 Beautiful UI**: Modern, responsive design with smooth animations
+- **⚡ Demo Mode**: Works completely standalone without requiring a backend
+
+## 📸 Screenshots
+
+### Dashboard
+> Track your learning progress with beautiful statistics and quick actions
+
+### Code Explainer
+> Get AI-powered explanations for any code snippet in multiple languages
+
+### Learning Plan
+> Generate personalized study roadmaps tailored to your goals
+
+*Screenshots coming soon! Run the app to see it in action.*
 
 ## 🚀 Demo Mode
 
@@ -145,22 +172,51 @@ CodeMentor/
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+### Ways to Contribute
+- 🐛 Report bugs
+- 💡 Suggest new features
+- 📝 Improve documentation
+- 🎨 Enhance UI/UX
+- ✨ Add new features
 
 ## 📄 License
 
-MIT License - feel free to use this project for learning and development!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
 - Built with React and modern web technologies
 - Inspired by the need for personalized learning experiences
 - Designed for developers, by developers
+- Special thanks to all contributors
 
 ## 📞 Support
 
-For questions or issues, please open an issue on GitHub.
+For questions or issues:
+- 📧 Open an issue on GitHub
+- 💬 Check existing discussions
+- 📖 Read the documentation
+
+## 🌟 Show Your Support
+
+Give a ⭐️ if this project helped you!
+
+## 📈 Roadmap
+
+- [ ] Dark mode
+- [ ] Code challenges
+- [ ] Community forum
+- [ ] Mobile app
+- [ ] Video tutorials
+- [ ] Gamification
+- [ ] Social features
 
 ---
 
 **Made with ❤️ for the developer community**
+
+[![GitHub stars](https://img.shields.io/github/stars/Aditya2987/CodeMentor?style=social)](https://github.com/Aditya2987/CodeMentor)
+[![GitHub forks](https://img.shields.io/github/forks/Aditya2987/CodeMentor?style=social)](https://github.com/Aditya2987/CodeMentor/fork)
+
