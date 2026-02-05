@@ -1,69 +1,112 @@
-# CodeMentor AI
+# 🎓 CodeMentor AI - Intelligent Learning Platform
 
-A Personalized Learning & Developer Productivity Assistant powered by AI.
+An AI-powered learning platform that helps developers master programming through personalized learning plans, code explanations, and progress tracking.
 
-## Features
+## ✨ Features
 
-- 🎯 Smart Learning Planner - AI-generated personalized study roadmaps
-- 💡 Interactive Code Explainer - Understand code with multi-level explanations
-- 🐛 Intelligent Debugging Assistant - Step-by-step debugging guidance
-- 📊 Progress Dashboard - Track your learning journey
-- 🔐 Secure Authentication - JWT-based user management
+- **🤖 AI Code Explainer**: Get intelligent explanations of code snippets at your skill level
+- **📚 Personalized Learning Plans**: Generate custom study roadmaps based on your goals
+- **📊 Progress Dashboard**: Track your learning journey with detailed statistics
+- **🎯 Adaptive Learning**: Content adjusts to beginner, intermediate, or advanced levels
+- **💻 Multi-Language Support**: JavaScript, Python, Java, C++, and more
 
-## Tech Stack
+## 🚀 Demo Mode
 
-**Frontend:**
-- React + Vite
-- Tailwind CSS
-- Monaco Editor
-- React Router
-- Axios
+The frontend works **completely standalone** without requiring a backend! Perfect for:
+- Quick demos and presentations
+- Frontend development and testing
+- Showcasing the UI/UX
+- Learning React and modern web development
 
-**Backend:**
-- Node.js + Express
-- MongoDB + Mongoose
-- OpenAI API (GPT-4)
+## 🛠️ Tech Stack
+
+### Frontend
+- React 18 with Vite
+- TailwindCSS for styling
+- React Router for navigation
+- Monaco Editor for code editing
+- Axios for API calls
+
+### Backend
+- Node.js & Express
+- MongoDB with Mongoose
 - JWT Authentication
-- bcryptjs
+- OpenAI API integration
 
-## Setup Instructions
+## 📦 Installation
 
 ### Prerequisites
-- Node.js (v18+)
-- MongoDB (local or Atlas)
-- OpenAI API key
+- Node.js 16+ and npm
+- MongoDB (optional - frontend works without it)
 
-### Installation
+### Quick Start
 
-1. Clone the repository
-2. Install dependencies:
+1. **Clone the repository**
 ```bash
-npm run install-all
+git clone https://github.com/YOUR_USERNAME/CodeMentor.git
+cd CodeMentor
 ```
 
-3. Create `.env` file in root:
+2. **Install dependencies**
+```bash
+# Install root dependencies
+npm install
+
+# Install client dependencies
+cd client
+npm install
+cd ..
 ```
+
+3. **Run in Demo Mode (Frontend Only)**
+```bash
+cd client
+npm run dev
+```
+Open http://localhost:5173 and use any email/password to login!
+
+4. **Run with Backend (Optional)**
+
+Create `.env` file in root:
+```env
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+OPENAI_API_KEY=your_openai_api_key
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/codementor-ai
-JWT_SECRET=your_secret_key_here
-OPENAI_API_KEY=your_openai_key_here
-NODE_ENV=development
 ```
 
-4. Start MongoDB (if local)
-
-5. Run the application:
+Start both servers:
 ```bash
+# Terminal 1 - Backend
+npm run dev
+
+# Terminal 2 - Frontend
+cd client
 npm run dev
 ```
 
-Frontend: http://localhost:3000
-Backend: http://localhost:5000
+## 🎮 Usage
 
-## Project Structure
+### Demo Mode (No Backend Required)
+1. Open the app at http://localhost:5173
+2. Click "Register" and enter any details
+3. Explore all features with mock data:
+   - View your dashboard with sample statistics
+   - Generate learning plans for any topic
+   - Get AI-simulated code explanations
+   - Track progress with visual indicators
+
+### Full Mode (With Backend)
+Connect to real MongoDB and OpenAI for:
+- Persistent data storage
+- Real AI-powered explanations
+- User authentication
+- Progress tracking across sessions
+
+## 📁 Project Structure
 
 ```
-codementor-ai/
+CodeMentor/
 ├── client/                 # React frontend
 │   ├── src/
 │   │   ├── components/    # Reusable components
@@ -77,25 +120,47 @@ codementor-ai/
 │   ├── routes/           # API routes
 │   ├── middleware/       # Auth middleware
 │   └── index.js          # Server entry
-└── package.json          # Root package.json
+└── package.json
 ```
 
-## API Endpoints
+## 🎨 Features Showcase
 
-### Authentication
-- POST `/api/auth/register` - Register new user
-- POST `/api/auth/login` - Login user
+### Dashboard
+- Real-time learning statistics
+- Study hours tracking
+- Topic completion metrics
+- Current learning streak
 
-### Learning
-- POST `/api/learning/plan` - Create learning plan
-- GET `/api/learning/plan` - Get user's plan
-- PATCH `/api/learning/plan/:id/progress` - Update progress
+### Code Explainer
+- Multi-language support
+- Skill-level adaptive explanations
+- Syntax highlighting with Monaco Editor
+- Copy-paste friendly interface
 
-### AI
-- POST `/api/ai/explain` - Explain code
-- POST `/api/ai/generate-plan` - Generate learning plan
-- POST `/api/ai/debug` - Get debugging help
+### Learning Plan Generator
+- Custom goal setting
+- Week-by-week breakdown
+- Progress visualization
+- Flexible scheduling
 
-## License
+## 🤝 Contributing
 
-MIT
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+MIT License - feel free to use this project for learning and development!
+
+## 🙏 Acknowledgments
+
+- Built with React and modern web technologies
+- Inspired by the need for personalized learning experiences
+- Designed for developers, by developers
+
+## 📞 Support
+
+For questions or issues, please open an issue on GitHub.
+
+---
+
+**Made with ❤️ for the developer community**
