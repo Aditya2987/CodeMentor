@@ -92,14 +92,13 @@ function Login({ setIsAuthenticated }) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 p-4">
-      <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md border border-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md border border-gray-200">
         <div className="text-center mb-8">
-          <div className="text-5xl mb-4">🎓</div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back!</h2>
-          <p className="text-gray-600">Sign in to continue your learning journey</p>
-          <div className="mt-3 inline-block bg-blue-50 border border-blue-200 rounded-lg px-4 py-2">
-            <p className="text-sm text-blue-700 font-semibold">✨ Demo Mode - Use any credentials</p>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Welcome Back</h2>
+          <p className="text-gray-600 text-sm">Sign in to continue your learning journey</p>
+          <div className="mt-3 inline-block bg-gray-100 border border-gray-200 rounded-lg px-4 py-2">
+            <p className="text-xs text-gray-600 font-medium">Demo Mode - Use any credentials</p>
           </div>
         </div>
         
@@ -164,7 +163,7 @@ function Login({ setIsAuthenticated }) {
           <button 
             type="submit" 
             disabled={loading}
-            className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-bold text-lg hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? (
               <span className="flex items-center justify-center">
@@ -181,9 +180,9 @@ function Login({ setIsAuthenticated }) {
         </form>
         
         <div className="mt-6 text-center">
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm">
             Don't have an account?{' '}
-            <Link to="/register" className="text-blue-600 hover:text-blue-700 font-semibold hover:underline">
+            <Link to="/register" className="text-gray-900 hover:text-gray-700 font-medium hover:underline">
               Create one now
             </Link>
           </p>

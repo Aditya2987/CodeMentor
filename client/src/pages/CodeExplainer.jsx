@@ -104,28 +104,24 @@ This ${language} code demonstrates several programming concepts:
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2 flex items-center">
-            <span className="mr-3">💡</span> Code Explainer
-          </h1>
-          <p className="text-lg text-gray-600">Get intelligent explanations for any code snippet</p>
+          <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-2">Code Explainer</h1>
+          <p className="text-base text-gray-600">Get intelligent explanations for any code snippet</p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Code Input Section */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-4">
-              <h2 className="text-xl font-bold text-white flex items-center">
-                <span className="mr-2">📝</span> Your Code
-              </h2>
+          <div className="bg-white rounded-lg shadow border border-gray-200">
+            <div className="bg-gray-800 p-4 rounded-t-lg">
+              <h2 className="text-lg font-semibold text-white">Your Code</h2>
             </div>
             <div className="p-6">
               <div className="flex flex-wrap gap-3 mb-4">
                 <div className="flex-1 min-w-[150px]">
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Language</label>
-                  <select value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-purple-500 focus:outline-none transition-colors">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
+                  <select value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 transition-colors">
                     <option value="javascript">JavaScript</option>
                     <option value="python">Python</option>
                     <option value="java">Java</option>
@@ -135,16 +131,16 @@ This ${language} code demonstrates several programming concepts:
                   </select>
                 </div>
                 <div className="flex-1 min-w-[150px]">
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Skill Level</label>
-                  <select value={level} onChange={(e) => setLevel(e.target.value)} className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-purple-500 focus:outline-none transition-colors">
-                    <option value="beginner">🌱 Beginner</option>
-                    <option value="intermediate">🚀 Intermediate</option>
-                    <option value="advanced">⚡ Advanced</option>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Skill Level</label>
+                  <select value={level} onChange={(e) => setLevel(e.target.value)} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 transition-colors">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
                   </select>
                 </div>
               </div>
               
-              <div className="border-2 border-gray-200 rounded-lg overflow-hidden mb-4">
+              <div className="border border-gray-300 rounded-lg overflow-hidden mb-4">
                 <Editor
                   height="400px"
                   language={language}
@@ -165,7 +161,7 @@ This ${language} code demonstrates several programming concepts:
               <button 
                 onClick={handleExplain} 
                 disabled={loading || !code.trim()} 
-                className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-800 transition-all disabled:bg-gray-300 disabled:cursor-not-allowed shadow-sm"
               >
                 {loading ? (
                   <span className="flex items-center justify-center">
@@ -176,36 +172,34 @@ This ${language} code demonstrates several programming concepts:
                     Analyzing...
                   </span>
                 ) : (
-                  <span className="flex items-center justify-center">
-                    <span className="mr-2">✨</span> Explain Code
-                  </span>
+                  'Explain Code'
                 )}
               </button>
             </div>
           </div>
 
           {/* Explanation Section */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-500 to-green-500 p-4">
-              <h2 className="text-xl font-bold text-white flex items-center">
-                <span className="mr-2">📖</span> Explanation
-              </h2>
+          <div className="bg-white rounded-lg shadow border border-gray-200">
+            <div className="bg-gray-800 p-4 rounded-t-lg">
+              <h2 className="text-lg font-semibold text-white">Explanation</h2>
             </div>
             <div className="p-6 overflow-y-auto" style={{maxHeight: '550px'}}>
               {explanation ? (
                 <div className="prose prose-sm max-w-none">
-                  <div className="whitespace-pre-wrap text-gray-700 leading-relaxed">{explanation}</div>
+                  <div className="whitespace-pre-wrap text-gray-700 leading-relaxed text-sm">{explanation}</div>
                 </div>
               ) : (
                 <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                  <div className="text-7xl mb-4 animate-bounce">💡</div>
-                  <h3 className="text-xl font-bold text-gray-700 mb-2">Ready to Learn?</h3>
-                  <p className="text-gray-500 mb-4 max-w-md">
+                  <svg className="w-16 h-16 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                  <h3 className="text-lg font-medium text-gray-700 mb-2">Ready to Learn</h3>
+                  <p className="text-gray-500 mb-4 max-w-md text-sm">
                     Paste your code in the editor, select your language and skill level, then click "Explain Code"
                   </p>
-                  <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                    <p className="text-sm text-blue-700 font-semibold">
-                      ✨ Works in demo mode without backend!
+                  <div className="bg-gray-50 border border-gray-200 p-3 rounded-lg">
+                    <p className="text-xs text-gray-600 font-medium">
+                      Works in demo mode without backend
                     </p>
                   </div>
                 </div>
